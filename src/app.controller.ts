@@ -15,7 +15,7 @@ export class AppController {
     return this.appService.getWelcome(name);
   }
 
-  @Get('/hi')
+  @Get('/hello')
   getHi(@Query('name') name: string) {
     return this.appService.getHi(name);
   }
