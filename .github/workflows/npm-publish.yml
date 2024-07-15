@@ -10,7 +10,7 @@ on:
     types: [created]
 
 jobs:
-  first-job:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: 'say hello world'
@@ -25,7 +25,8 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-#      - run: npm ci
-#      - run: npm publish
+      - name: 'say hello world'
+        shell: bash
+        run: echo 'Hello, world!'
         env:
           NODE_AUTH_TOKEN: ${{secrets.test}}
